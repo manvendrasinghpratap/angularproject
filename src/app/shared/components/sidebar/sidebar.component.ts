@@ -12,7 +12,6 @@ export class SidebarComponent implements OnInit {
   userType: string;
   constructor(public _nanservice: NavService) {
     this.menuItems = this._nanservice.MENUITEMS;
-
   }
 
   ngOnInit(): void {
@@ -20,6 +19,7 @@ export class SidebarComponent implements OnInit {
     this.userType = 'Admin';
   }
   // Click toggle menu
-  toggleNavActive(item: any) { }
-  item.active = !item.active
+  toggleNavActive(item: any) {
+    item.active = !item.active;
+  }
 }

@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-
 // menu
 export interface Menu {
   path?: string;
@@ -14,9 +10,16 @@ export interface Menu {
   children?: Menu[];
 }
 
+@Injectable({
+  providedIn: 'root'
+})
+
+
+
 export class NavService {
 
   constructor() { }
+  collapsSidebar: boolean = false;
 
   MENUITEMS: Menu[] = [
     { path: '/dashboard/default', title: 'Dashboard', icon: 'home', type: 'link', active: true },
@@ -48,16 +51,17 @@ export class NavService {
     },
     {
       title: 'Users', icon: 'user', type: 'sub', active: false, children: [
-        { path: '/users/create - user', title: 'Create New User', type: 'link' },
-        { path: '/users/list-user', title: 'User List', type: 'link' }
+        { path: '/users/create-user', title: 'Create New User', type: 'link', icon: 'settings' },
+        { path: '/users/list-user', title: 'User List', type: 'link', icon: 'settings' }
       ]
     },
     { path: '/reports', title: 'Reports', icon: 'bar-chart', type: 'link', active: false },
     {
       title: 'Settings', icon: 'settings', type: 'sub', active: false, children: [
-        { path: '/settings/profile', title: 'Profile Setting', type: 'link' }
+        { path: '/settings/profile', title: 'Profile Setting', type: 'link', icon: 'settings' }
       ]
     },
     { path: '/invoice/', title: 'Invoice', icon: 'archive', type: 'link', active: false },
     { path: '/auth/logout/', title: 'Logout', icon: 'log-out', type: 'link', active: false }
   ];
+}

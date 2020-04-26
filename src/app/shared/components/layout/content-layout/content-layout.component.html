@@ -1,1 +1,15 @@
-<p>content-layout works!</p>
+<div class="page-wrapper">
+    <app-header></app-header>
+    <div class="page-body-wrapper">
+        <div class="page-sidebar" [class.open]="_navService.collapsSidebar">
+            <app-sidebar></app-sidebar>
+        </div> <!-- page-sidebar -->
+        <div class="page-body">
+            <app-breadcrumb></app-breadcrumb>
+            <router-outlet></router-outlet>
+        </div> <!-- page-body -->
+        <footer class="footer">
+            <app-footer></app-footer>
+        </footer>
+    </div> <!--  page-body-wrapper -->
+</div> <!-- page-wrappe End -->

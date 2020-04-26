@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContentLayoutComponent } from './components/layout/content-layout/content-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,10 +18,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
       FooterComponent,
       HeaderComponent,
       ContentLayoutComponent,
-      SidebarComponent
+      SidebarComponent,
+
     ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+  ],
+  exports: [
+    FeathersIconsComponent
   ]
 })
 export class SharedModule { }
