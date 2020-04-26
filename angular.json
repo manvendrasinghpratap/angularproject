@@ -92,7 +92,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/style.scss",
+              "./node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": []
           }
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projecttraining"
+    }
+  },
+  "defaultProject": "projecttraining",
+  "cli": {
+    "analytics": "017273bc-5af0-492f-a20a-a760939d9a1d"
+  }
 }
