@@ -51,17 +51,18 @@ export class NavService {
     },
     {
       title: 'Users', icon: 'user', type: 'sub', active: false, children: [
-        { path: '/users/create-user', title: 'Create New User', type: 'link', icon: 'settings' },
-        { path: '/users/list-user', title: 'User List', type: 'link', icon: 'settings' }
+        { path: '/users/create-user', title: 'Create New User', type: 'link', icon: 'user' },
+        { path: '/users/list-user', title: 'User List', type: 'link', icon: 'user' }
       ]
     },
     { path: '/reports', title: 'Reports', icon: 'bar-chart', type: 'link', active: false },
     {
       title: 'Settings', icon: 'settings', type: 'sub', active: false, children: [
-        { path: '/settings/profile', title: 'Profile Setting', type: 'link', icon: 'settings' }
+        { path: '/settings/profile', title: 'Profile Setting', type: 'link' },
+        { path: '/settings/system', title: 'System Setting', type: 'link' }
       ]
     },
-    { path: '/invoice/', title: 'Invoice', icon: 'archive', type: 'link', active: false },
-    { path: '/auth/logout/', title: 'Logout', icon: 'log-out', type: 'link', active: false }
+    { path: '/invoice', title: 'Invoice', icon: 'archive', type: 'link', active: false },
+    { path: '/auth/logout', title: 'Logout', icon: 'log-out', type: 'link', active: false }
   ];
 }

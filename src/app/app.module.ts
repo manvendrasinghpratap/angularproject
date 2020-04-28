@@ -10,6 +10,7 @@ import { AuthModule } from './components/auth/auth.module';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CKEditorModule } from 'ngx-ckeditor';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 
 
@@ -17,6 +18,7 @@ import { CKEditorModule } from 'ngx-ckeditor';
   declarations: [
     AppComponent,
     PagenotfoundComponent,
+    LogoutComponent,
 
   ],
   imports: [

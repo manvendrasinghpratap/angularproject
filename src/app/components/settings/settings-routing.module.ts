@@ -4,7 +4,12 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
-  { path: '', component: ProfileComponent }
+  {
+    path: '', children: [
+      { path: 'profile', component: ProfileComponent },
+      { path: 'system', component: ProfileComponent }
+    ]
+  }
 ];
 
 @NgModule({

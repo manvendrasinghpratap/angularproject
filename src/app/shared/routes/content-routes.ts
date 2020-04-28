@@ -8,6 +8,6 @@ export const content: Routes = [
     { path: 'masters', loadChildren: () => import('../../components/masters/masters.module').then(m => m.MastersModule) },
     { path: 'users', loadChildren: () => import('../../components/users/users.module').then(m => m.UsersModule) },
     { path: 'reports', loadChildren: () => import('../../components/reports/reports.module').then(m => m.ReportsModule) },
-    { path: 'setting', loadChildren: () => import('../../components/settings/settings.module').then(m => m.SettingsModule) },
+    { path: 'settings', loadChildren: () => import('../../components/settings/settings.module').then(m => m.SettingsModule) },
     { path: 'invoice', loadChildren: () => import('../../components/invoice/invoice-routing.module').then(m => m.InvoiceRoutingModule) }
 ];

@@ -16,12 +16,13 @@
             <!-- Sub Menu Begin-->
             <a href="javascript:void(0)" class="sidebar-header" *ngIf="menuItem.type ==='sub'"
                 (click)="toggleNavActive(menuItem)">
-                <app-feathers-icons [icon]="menuItem.icon"></app-feathers-icons>
+                <app-feathers-icons [icon]="menuItem.icon"></app-feathers-icons>{{menuItem.title}}
                 <i class="fa fa-angle-right pull-right"></i>
             </a> <!-- Sub Menu End-->
             <!-- Link Menu -->
             <a [routerLink]="menuItem.path" routerLinkActive="active" class="sidebar-header"
                 *ngIf="menuItem.type ==='link'">
+                <app-feathers-icons [icon]="menuItem.icon"></app-feathers-icons>{{menuItem.title}}
                 <i class="fa fa-angle-right pull-right"></i>
             </a>
 
@@ -31,13 +32,12 @@
                     <!-- Sub -->
                     <a href="javascript:void(0)" *ngIf="childrenItem.type === 'sub'"
                         (click)="toggleNavActive(childrenItem)">
-                        <app-feathers-icons [icon]="childrenItem.icon"></app-feathers-icons>
-                        <i class="fa fa-circle"></i><span> {{childrenItem.title}} </span>
+                        <i class="fa fa-circle"></i><span> {{childrenItem.title}} ddd</span>
                         <i class="fa fa-angle-down pull-right"></i>
                     </a>
                     <!-- Link -->
                     <a [routerLink]="childrenItem.path" *ngIf="childrenItem.type === 'link'" routerLinkActive="active">
-                        <i class="fa fa-circle"></i><span> {{childrenItem.title}} </span>
+                        <i class="fa fa-circle"></i><span> {{childrenItem.title}}</span>
                         <i class="fa fa-angle-down pull-right"></i>
                     </a>
 

@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContentLayoutComponent } from './components/layout/content-layout/content-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
+    NgbModule,
   ],
   exports: [
     FeathersIconsComponent
